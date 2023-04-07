@@ -83,8 +83,8 @@ public void MethodDdd(IMyInterface param1)
 ```
 By declaring the common properties in the IMyInterface interface and implementing them in both MyClass1 and MyClass2, you can access those properties within the MethodDdd method regardless of whether you're dealing with an object of MyClass1 or MyClass2 type. You can also use type checking (is and as keywords) to access class-specific properties if needed.
 
-**A3** if (param1 is MyClass1) is violating SOLID principles, how can this be re written?
-You're correct, using type checking with if (param1 is MyClass1) can be considered a violation of the SOLID principles, specifically the Open/Closed Principle (OCP), which states that software entities should be open for extension but closed for modification. One way to refactor the code to adhere to SOLID principles is to use polymorphism to avoid type checking. Here's an example:
+**Q3** if (param1 is MyClass1) is violating SOLID principles, how can this be re written?
+**A3** You're correct, using type checking with if (param1 is MyClass1) can be considered a violation of the SOLID principles, specifically the Open/Closed Principle (OCP), which states that software entities should be open for extension but closed for modification. One way to refactor the code to adhere to SOLID principles is to use polymorphism to avoid type checking. Here's an example:
 ```c#
 // Define an interface that both MyClass1 and MyClass2 will implement
 public interface IMyInterface
